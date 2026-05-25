@@ -9,7 +9,7 @@
 /* Tausta */
 body {
   height: 100vh;
-  background: linear-gradient(135deg, #3a3d98, #6c63ff);
+  background: linear-gradient(180deg, #1e1f4f, #4c3a8f);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,12 +18,24 @@ body {
 
 /* App-kortti */
 .app {
-  width: 320px;
-  padding: 20px;
-  border-radius: 25px;
+  width: 350px;
+  padding: 25px;
+  border-radius: 30px;
   background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Hakukenttä */
@@ -48,11 +60,12 @@ body {
   background: #ff7b54;
   color: white;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
 .search button:hover {
   background: #ff5722;
+  transform: scale(1.05);
 }
 
 /* Pääsää */
@@ -62,12 +75,14 @@ body {
 }
 
 .weather h1 {
-  font-size: 26px;
-  margin-bottom: 5px;
+  font-size: 22px;
+  opacity: 0.9;
 }
 
 .weather h2 {
-  font-size: 55px;
+  font-size: 65px;
+  font-weight: bold;
+  margin: 10px 0;
 }
 
 .weather p {
@@ -83,18 +98,17 @@ body {
 
 /* Lisätiedot */
 .details {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
 }
 
 .details p {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 10px;
-  border-radius: 15px;
-  width: 100%;
-  text-align: center;
-  font-size: 14px;
+  background: rgba(255, 255, 255, 0.12);
+  padding: 15px;
+  border-radius: 18px;
+  font-size: 13px;
+  backdrop-filter: blur(5px);
 }
 
 /* Responsiivisuus */
