@@ -1,20 +1,101 @@
-body {
+* {
   margin: 0;
-  font-family: Arial;
-  background: linear-gradient(to bottom, #2c3e50, #4ca1af);
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #3a3d98, #6c63ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
 }
 
 .app {
-  max-width: 400px;
-  margin: auto;
+  width: 320px;
   padding: 20px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.search {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+}
+
+.search button {
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: none;
+  background: #ff7b54;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search button:hover {
+  background: #ff5722;
 }
 
 .weather {
   text-align: center;
+  margin-bottom: 20px;
 }
 
-h2 {
-  font-size: 60px;
+.weather h1 {
+  font-size: 26px;
+  margin-bottom: 5px;
+}
+
+.weather h2 {
+  font-size: 55px;
+}
+
+.weather p {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+#icon {
+  width: 80px;
+  margin: 10px 0;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.details p {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 15px;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Responsiivisuus */
+@media (max-width: 400px) {
+  .app {
+    width: 90%;
+  }
+
+  .weather h2 {
+    font-size: 40px;
+  }
 }
