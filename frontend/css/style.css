@@ -1,3 +1,4 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -5,6 +6,7 @@
   font-family: Arial, sans-serif;
 }
 
+/* Tausta */
 body {
   height: 100vh;
   background: linear-gradient(135deg, #3a3d98, #6c63ff);
@@ -14,6 +16,7 @@ body {
   color: white;
 }
 
+/* App-kortti */
 .app {
   width: 320px;
   padding: 20px;
@@ -23,12 +26,14 @@ body {
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
 
+/* Hakukenttä */
 .search {
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
 }
 
+.search input {
   flex: 1;
   padding: 10px;
   border-radius: 20px;
@@ -50,6 +55,7 @@ body {
   background: #ff5722;
 }
 
+/* Pääsää */
 .weather {
   text-align: center;
   margin-bottom: 20px;
@@ -69,11 +75,13 @@ body {
   opacity: 0.9;
 }
 
+/* Ikoni */
 #icon {
   width: 80px;
   margin: 10px 0;
 }
 
+/* Lisätiedot */
 .details {
   display: flex;
   justify-content: space-between;
