@@ -1,8 +1,10 @@
+# Tulee, kun käyttäjä klikkaa "Etsi" nappia tai painaa "Enteriä"
 async function search() {
     const city = document.getElementById("search-input").value.trim();
     if (!city) return;
 
     try {
+        # Lähettää pyynnön Flask Backendille
         const res  = await fetch(`/search?city=${city}`);
         const data = await res.json();
 
