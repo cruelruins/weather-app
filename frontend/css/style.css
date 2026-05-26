@@ -1,4 +1,5 @@
-/* Reset */
+/* *** Reset *** */
+
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +7,9 @@
   font-family: Arial, sans-serif;
 }
 
-/* Tausta */
+
+/* *** Tausta *** */
+
 body {
   height: 100vh;
   background: linear-gradient(180deg, #1e1f4f, #4c3a8f);
@@ -16,7 +19,9 @@ body {
   color: white;
 }
 
-/* App-kortti */
+
+/* *** App-kortti *** */
+
 .app {
   width: 350px;
   padding: 25px;
@@ -38,7 +43,9 @@ body {
   }
 }
 
-/* Hakukenttä */
+
+/* *** Hakukenttä *** */
+
 .search {
   display: flex;
   gap: 10px;
@@ -68,7 +75,9 @@ body {
   transform: scale(1.05);
 }
 
-/* Pääsää */
+
+/* *** Pääsää *** */
+
 .weather {
   text-align: center;
   margin-bottom: 20px;
@@ -90,13 +99,59 @@ body {
   opacity: 0.9;
 }
 
-/* Ikoni */
+
+.temp-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.weather-icon {
+  font-size: 40px;
+}
+
+
+.hourly {
+  display: flex;
+  overflow-x: auto;
+  gap: 12px;
+  margin: 20px 0;
+  padding-bottom: 10px;
+}
+
+.hourly::-webkit-scrollbar {
+  display: none;
+}
+
+.hour {
+  min-width: 65px;
+  background: rgba(255,255,255,0.12);
+  border-radius: 18px;
+  padding: 12px 8px;
+  text-align: center;
+  font-size: 13px;
+  backdrop-filter: blur(5px);
+}
+
+
+#desc::before {
+  content: "☁️ ";
+}
+
+
+
+
+/* *** Ikoni *** */
+
 #icon {
   width: 80px;
   margin: 10px 0;
 }
 
-/* Lisätiedot */
+
+/* *** Lisätiedot *** */
+
 .details {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -104,14 +159,16 @@ body {
 }
 
 .details p {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255,255,255,0.12);
   padding: 15px;
   border-radius: 18px;
   font-size: 13px;
-  backdrop-filter: blur(5px);
+  text-align: center;
 }
 
-/* Responsiivisuus */
+
+/* *** Responsiivisuus *** */
+
 @media (max-width: 400px) {
   .app {
     width: 90%;
