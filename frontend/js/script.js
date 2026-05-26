@@ -22,7 +22,7 @@ async function search() {
 function renderWeather(data) {
     document.getElementById("error").textContent   = "";
     document.getElementById("city").textContent    = data.city;
-    document.getElementById("temp").textContent    = data.temp + "°C";
+    document.getElementById("temp").textContent = Math.round(data.temp) + "°C";
     document.getElementById("desc").textContent    = data.description;
     document.getElementById("wind").textContent    = "💨 " + data.wind + " m/s";
     document.getElementById("humidity").textContent = "💧 " + data.humidity + "%";
